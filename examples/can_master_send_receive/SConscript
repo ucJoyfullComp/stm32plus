@@ -5,6 +5,8 @@
 
 import os
 
+gccpath="/opt/uzi/bin/gcc-arm-none-eabi-6_2-2016q4/bin/";
+
 # import everything exported in SConstruct
 
 Import('*')
@@ -92,10 +94,10 @@ if supported:
   # trigger a build with the correct library name
 
   elf=env.Program(example+".elf",matches)
-  hex=env.Command(example+".hex",elf,"arm-none-eabi-objcopy -O ihex "+buildoutdir+"/"+example+".elf "+buildoutdir+"/"+example+".hex")
-  bin=env.Command(example+".bin",elf,"arm-none-eabi-objcopy -O binary "+buildoutdir+"/"+example+".elf "+buildoutdir+"/"+example+".bin")
-  lst=env.Command(example+".lst",elf,"arm-none-eabi-objdump -h -S "+buildoutdir+"/"+example+".elf > "+buildoutdir+"/"+example+".lst")
-  size=env.Command(example+".size",elf,"arm-none-eabi-size --format=berkeley "+buildoutdir+"/"+example+".elf | tee "+buildoutdir+"/"+example+".size")
+  hex=env.Command(example+".hex",elf,gccpath+"arm-none-eabi-objcopy -O ihex "+buildoutdir+"/"+example+".elf "+buildoutdir+"/"+example+".hex")
+  bin=env.Command(example+".bin",elf,gccpath+"arm-none-eabi-objcopy -O binary "+buildoutdir+"/"+example+".elf "+buildoutdir+"/"+example+".bin")
+  lst=env.Command(example+".lst",elf,gccpath+"arm-none-eabi-objdump -h -S "+buildoutdir+"/"+example+".elf > "+buildoutdir+"/"+example+".lst")
+  size=env.Command(example+".size",elf,gccpath+"arm-none-eabi-size --format=berkeley "+buildoutdir+"/"+example+".elf | tee "+buildoutdir+"/"+example+".size")
 
   # install the library if the user gave the install option
 
