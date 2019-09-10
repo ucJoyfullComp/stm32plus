@@ -71,6 +71,7 @@ Usage: scons mode=<MODE> mcu=<MCU> (hse=<HSE> / hsi=<HSI>) [float=hard] [example
 import os
 import platform
 
+gccpath="/opt/uzi/bin/gcc-arm-none-eabi-6_2-2016q4/bin/";
 
 #
 # set CCFLAGS/ASFLAGS/LINKFLAGS
@@ -111,7 +112,7 @@ if len(VERSION) != 6:
   print "Unexpected error getting the library version"
   Exit(1)
 
-INSTALLDIR=ARGUMENTS.get('INSTALLDIR') or "/usr/local/arm-none-eabi"
+INSTALLDIR=ARGUMENTS.get('INSTALLDIR') or "$HOME/.local/arm-none-eabi"
 INSTALLDIR_PREFIX=ARGUMENTS.get('INSTALLDIR_PREFIX') or "stm32plus-"+VERSION
 
 # get the required args and validate
@@ -154,11 +155,11 @@ env=Environment(ENV=os.environ)
 
 # replace the compiler values in the environment
 
-env.Replace(CC="arm-none-eabi-gcc")
-env.Replace(CXX="arm-none-eabi-g++")
-env.Replace(AS="arm-none-eabi-as")
-env.Replace(AR="arm-none-eabi-ar")
-env.Replace(RANLIB="arm-none-eabi-ranlib")
+env.Replace(CC=gccpath+"arm-none-eabi-gcc")
+env.Replace(CXX=gccpath+"arm-none-eabi-g++")
+env.Replace(AS=gccpath+"arm-none-eabi-as")
+env.Replace(AR=gccpath+"arm-none-eabi-ar")
+env.Replace(RANLIB=gccpath+"arm-none-eabi-ranlib")
 
 # set the include directories
 
@@ -238,7 +239,7 @@ if lto=="yes":
         lto_plugin="liblto_plugin.so"
 
     import subprocess
-    opts=subprocess.check_output("arm-none-eabi-gcc --print-file-name="+lto_plugin,shell=True).strip()
+    opts=subprocess.check_output(gccpath+"arm-none-eabi-gcc --print-file-name="+lto_plugin,shell=True).strip()
     env.Append(CFLAGS=["-flto"])
     env.Append(CXXFLAGS=["-flto"])
     env.Append(CPPFLAGS=["-flto"])
