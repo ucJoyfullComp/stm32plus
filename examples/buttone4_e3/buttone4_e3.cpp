@@ -43,44 +43,65 @@ class Button {
   protected:
 
     static const bool BUTTON_PRESSED_HIGH  = false;   // false = LOW when pressed, true = HIGH when pressed
-    static const uint32_t INITIAL_DELAY_MS = 600;
-    static const uint32_t REPEAT_DELAY_MS  = 150;
 
   public:
     void run() {
 
       // initialise the ports
 
-      GpioC<DefaultDigitalOutputFeature<4> > pc;
-      GpioE<DigitalInputFeature<GPIO_Speed_50MHz, Gpio::PUPD_UP, 4> > pe;
+      GpioA<DefaultDigitalOutputFeature<6,7> > pa;
+      GpioE<DigitalInputFeature<GPIO_Speed_2MHz, Gpio::PUPD_UP, 3,4> > pe;
 
       // lights off (this LED is active high, i.e. PD13 is a source)
 
-      pc[4].reset();
+      pa[6].set();
+      pa[7].set();
 
       // create the button class with parameters
 
-      AutoRepeatPushButton button(pe[4],BUTTON_PRESSED_HIGH,INITIAL_DELAY_MS,REPEAT_DELAY_MS);
+      PushButton k0(pe[4],BUTTON_PRESSED_HIGH);
+      PushButton k1(pe[3],BUTTON_PRESSED_HIGH);
 
       // main loop
+      
+      bool toggle[2] = {false, false};
+      bool pressed[2] = {false, false};
 
       for(;;) {
 
         // sample the button and swith the LED on (HIGH) or off (LOW)
+        
 
-        if(button.getState()==PushButton::Pressed) {
-
-          // switch the LED on for 10ms
-
-          pc[4].set();
-          MillisecondTimer::delay(10);
+        if (k0.getState()==PushButton::Pressed) {
+          if (!pressed[0]) {
+			  pressed[0] = true;
+			  toggle[0]^=true;
+		  }
         }
-        else
-          pc[4].reset();
+        else {
+			pressed[0] = false;
+		}
+        if (toggle[0])
+          pa[6].reset();
+		else
+          pa[6].set();
+
+        if (k1.getState()==PushButton::Pressed) {
+          if (!pressed[1]) {
+			  pressed[1] = true;
+			  toggle[1]^=true;
+		  }
+        }
+        else {
+			pressed[1] = false;
+		}
+        if (toggle[1])
+          pa[7].reset();
+		else
+          pa[7].set();
       }
     }
 };
-
 
 /*
  * Main entry point
