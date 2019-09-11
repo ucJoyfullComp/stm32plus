@@ -71,8 +71,6 @@ Usage: scons mode=<MODE> mcu=<MCU> (hse=<HSE> / hsi=<HSI>) [float=hard] [example
 import os
 import platform
 
-gccpath="/opt/uzi/bin/gcc-arm-none-eabi-6_2-2016q4/bin/";
-
 #
 # set CCFLAGS/ASFLAGS/LINKFLAGS
 #
@@ -154,6 +152,8 @@ float = None
 env=Environment(ENV=os.environ)
 
 # replace the compiler values in the environment
+
+gccpath="/opt/uzi/bin/gcc-arm-none-eabi-6_2-2016q4/bin/";
 
 env.Replace(CC=gccpath+"arm-none-eabi-gcc")
 env.Replace(CXX=gccpath+"arm-none-eabi-g++")
@@ -256,7 +256,7 @@ if float:
 # launch SConscript for the main library
 
 libstm32plus=SConscript("lib/SConscript",
-                        exports=["mode","mcu","osc","osc_type","osc_def","env","systemprefix","INSTALLDIR","INSTALLDIR_PREFIX","VERSION"],
+                        exports=["mode","mcu","osc","osc_type","osc_def","env","gccpath","systemprefix","INSTALLDIR","INSTALLDIR_PREFIX","VERSION"],
                         variant_dir="lib/build/"+systemprefix,
                         duplicate=0)
 
@@ -265,7 +265,7 @@ env.Append(LIBS=[libstm32plus])
 # launch SConscript for the examples
 
 if build_examples!="no":
-    SConscript("examples/SConscript",exports=["mode","mcu","osc","osc_type","osc_def","env","systemprefix","INSTALLDIR","INSTALLDIR_PREFIX","VERSION"])
+    SConscript("examples/SConscript",exports=["mode","mcu","osc","osc_type","osc_def","env","gccpath","systemprefix","INSTALLDIR","INSTALLDIR_PREFIX","VERSION"])
 
 # build the CMake helper
 

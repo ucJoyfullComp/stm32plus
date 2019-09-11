@@ -5,8 +5,6 @@
 
 import os
 
-gccpath="/opt/uzi/bin/gcc-arm-none-eabi-6_2-2016q4/bin/";
-
 # import everything exported in SConstruct
 
 Import('*')
