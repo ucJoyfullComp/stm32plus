@@ -76,10 +76,10 @@ import platform
 #
 
 def setFlags(cpu,libdef):
-
+  
   cpuopt="-mcpu=cortex-"+cpu;
   libopt="-DSTM32PLUS_"+libdef;
-
+    
   env.Append(CCFLAGS=[cpuopt,libopt])
   env.Append(ASFLAGS=cpuopt)
   env.Append(LINKFLAGS=cpuopt)
@@ -147,13 +147,17 @@ lto = ARGUMENTS.get('lto')
 
 float = None
 
+# use GCCPATH
+
+gccpath = ARGUMENTS.get('gcc')
+if !gccpath:
+  gccpath = "/opt/uzi/bin/gcc-arm-none-eabi-6_2-2016q4/bin/";
+
 # set up build environment and pull in OS environment variables
 
 env=Environment(ENV=os.environ)
 
 # replace the compiler values in the environment
-
-gccpath="/opt/uzi/bin/gcc-arm-none-eabi-6_2-2016q4/bin/";
 
 env.Replace(CC=gccpath+"arm-none-eabi-gcc")
 env.Replace(CXX=gccpath+"arm-none-eabi-g++")
