@@ -1,0 +1,188 @@
+sed 's/func_code/__code__/g' examples/adc_analog_watchdog/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/adc_analog_watchdog/SConscript
+sed 's/func_code/__code__/g' examples/adc_multi_dma_multichan/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/adc_multi_dma_multichan/SConscript
+sed 's/func_code/__code__/g' examples/adc_single_dma_multichan/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/adc_single_dma_multichan/SConscript
+sed 's/func_code/__code__/g' examples/adc_single_injected/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/adc_single_injected/SConscript
+sed 's/func_code/__code__/g' examples/adc_single_interrupts/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/adc_single_interrupts/SConscript
+sed 's/func_code/__code__/g' examples/adc_single/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/adc_single/SConscript
+sed 's/func_code/__code__/g' examples/adc_single_timer_interrupts/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/adc_single_timer_interrupts/SConscript
+sed 's/func_code/__code__/g' examples/ads7843/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/ads7843/SConscript
+sed 's/func_code/__code__/g' examples/blinkc4/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/blinkc4/SConscript
+sed 's/func_code/__code__/g' examples/blink/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/blink/SConscript
+sed 's/func_code/__code__/g' examples/buttone4_e3/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/buttone4_e3/SConscript
+sed 's/func_code/__code__/g' examples/button/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/button/SConscript
+sed 's/func_code/__code__/g' examples/can_master_send_receive/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/can_master_send_receive/SConscript
+sed 's/func_code/__code__/g' examples/crc/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/crc/SConscript
+sed 's/func_code/__code__/g' examples/cs43l22_beep/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/cs43l22_beep/SConscript
+sed 's/func_code/__code__/g' examples/dac_circular/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/dac_circular/SConscript
+sed 's/func_code/__code__/g' examples/dac_noise/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/dac_noise/SConscript
+sed 's/func_code/__code__/g' examples/dac_triangle/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/dac_triangle/SConscript
+sed 's/func_code/__code__/g' examples/debug_semihosting/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/debug_semihosting/SConscript
+sed 's/func_code/__code__/g' examples/dma_copy/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/dma_copy/SConscript
+sed 's/func_code/__code__/g' examples/dma_fill/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/dma_fill/SConscript
+sed 's/func_code/__code__/g' examples/exti/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/exti/SConscript
+sed 's/func_code/__code__/g' examples/fatfs_iterate/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/fatfs_iterate/SConscript
+sed 's/func_code/__code__/g' examples/fatfs_reader/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/fatfs_reader/SConscript
+sed 's/func_code/__code__/g' examples/fatfs_writer/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/fatfs_writer/SConscript
+sed 's/func_code/__code__/g' examples/flash_internal_settings/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/flash_internal_settings/SConscript
+sed 's/func_code/__code__/g' examples/flash_spi_program/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/flash_spi_program/SConscript
+sed 's/func_code/__code__/g' examples/flash_spi_reader/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/flash_spi_reader/SConscript
+sed 's/func_code/__code__/g' examples/fsmc_sram/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/fsmc_sram/SConscript
+sed 's/func_code/__code__/g' examples/hd44780/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/hd44780/SConscript
+sed 's/func_code/__code__/g' examples/hx8347a/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/hx8347a/SConscript
+sed 's/func_code/__code__/g' examples/hx8352a_gpio/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/hx8352a_gpio/SConscript
+sed 's/func_code/__code__/g' examples/hx8352a/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/hx8352a/SConscript
+sed 's/func_code/__code__/g' examples/i2c_at24c32/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/i2c_at24c32/SConscript
+sed 's/func_code/__code__/g' examples/i2c_cs43l22/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/i2c_cs43l22/SConscript
+sed 's/func_code/__code__/g' examples/ili9325/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/ili9325/SConscript
+sed 's/func_code/__code__/g' examples/ili9327/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/ili9327/SConscript
+sed 's/func_code/__code__/g' examples/ili9481/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/ili9481/SConscript
+sed 's/func_code/__code__/g' examples/lds285/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/lds285/SConscript
+sed 's/func_code/__code__/g' examples/lgdp453x/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/lgdp453x/SConscript
+sed 's/func_code/__code__/g' examples/mc2pa8201/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/mc2pa8201/SConscript
+sed 's/func_code/__code__/g' examples/net_dhcp/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/net_dhcp/SConscript
+sed 's/func_code/__code__/g' examples/net_dns/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/net_dns/SConscript
+sed 's/func_code/__code__/g' examples/net_ftp_server/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/net_ftp_server/SConscript
+sed 's/func_code/__code__/g' examples/net_llip/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/net_llip/SConscript
+sed 's/func_code/__code__/g' examples/net_ping_client/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/net_ping_client/SConscript
+sed 's/func_code/__code__/g' examples/net_tcp_client_async/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/net_tcp_client_async/SConscript
+sed 's/func_code/__code__/g' examples/net_tcp_client/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/net_tcp_client/SConscript
+sed 's/func_code/__code__/g' examples/net_tcp_server/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/net_tcp_server/SConscript
+sed 's/func_code/__code__/g' examples/net_udp_receive_async/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/net_udp_receive_async/SConscript
+sed 's/func_code/__code__/g' examples/net_udp_receive/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/net_udp_receive/SConscript
+sed 's/func_code/__code__/g' examples/net_udp_send/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/net_udp_send/SConscript
+sed 's/func_code/__code__/g' examples/net_web_client/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/net_web_client/SConscript
+sed 's/func_code/__code__/g' examples/net_web_pframe/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/net_web_pframe/SConscript
+sed 's/func_code/__code__/g' examples/net_web_server/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/net_web_server/SConscript
+sed 's/func_code/__code__/g' examples/pframe/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/pframe/SConscript
+sed 's/func_code/__code__/g' examples/power/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/power/SConscript
+sed 's/func_code/__code__/g' examples/r61523_f051/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/r61523_f051/SConscript
+sed 's/func_code/__code__/g' examples/r61523_mdvl/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/r61523_mdvl/SConscript
+sed 's/func_code/__code__/g' examples/r61523/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/r61523/SConscript
+sed 's/func_code/__code__/g' examples/rtc/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/rtc/SConscript
+sed 's/func_code/__code__/g' examples/sdio/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/sdio/SConscript
+sed 's/func_code/__code__/g' examples/spi_send_dma/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/spi_send_dma/SConscript
+sed 's/func_code/__code__/g' examples/spi_send_interrupts/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/spi_send_interrupts/SConscript
+sed 's/func_code/__code__/g' examples/spi_send_sync/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/spi_send_sync/SConscript
+sed 's/func_code/__code__/g' examples/ssd1289/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/ssd1289/SConscript
+sed 's/func_code/__code__/g' examples/ssd1963/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/ssd1963/SConscript
+sed 's/func_code/__code__/g' examples/st7783/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/st7783/SConscript
+sed 's/func_code/__code__/g' examples/timer_7segment/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/timer_7segment/SConscript
+sed 's/func_code/__code__/g' examples/timer_dma_pwm/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/timer_dma_pwm/SConscript
+sed 's/func_code/__code__/g' examples/timer_dma_usart/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/timer_dma_usart/SConscript
+sed 's/func_code/__code__/g' examples/timer_dual_gpio_out/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/timer_dual_gpio_out/SConscript
+sed 's/func_code/__code__/g' examples/timer_dual_pwm_gpio_out/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/timer_dual_pwm_gpio_out/SConscript
+sed 's/func_code/__code__/g' examples/timer_encoder/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/timer_encoder/SConscript
+sed 's/func_code/__code__/g' examples/timer_gpio_out/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/timer_gpio_out/SConscript
+sed 's/func_code/__code__/g' examples/timer_input_capture/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/timer_input_capture/SConscript
+sed 's/func_code/__code__/g' examples/timer_interrupts/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/timer_interrupts/SConscript
+sed 's/func_code/__code__/g' examples/timer_master_slave/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/timer_master_slave/SConscript
+sed 's/func_code/__code__/g' examples/timer_pwm_break/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/timer_pwm_break/SConscript
+sed 's/func_code/__code__/g' examples/timer_pwm_gpio_out/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/timer_pwm_gpio_out/SConscript
+sed 's/func_code/__code__/g' examples/usart_receive_dma/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/usart_receive_dma/SConscript
+sed 's/func_code/__code__/g' examples/usart_receive_interrupts/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/usart_receive_interrupts/SConscript
+sed 's/func_code/__code__/g' examples/usart_receive_sync/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/usart_receive_sync/SConscript
+sed 's/func_code/__code__/g' examples/usart_send_dma_interrupts/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/usart_send_dma_interrupts/SConscript
+sed 's/func_code/__code__/g' examples/usart_send_dma/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/usart_send_dma/SConscript
+sed 's/func_code/__code__/g' examples/usart_send_interrupts/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/usart_send_interrupts/SConscript
+sed 's/func_code/__code__/g' examples/usart_send_sync/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/usart_send_sync/SConscript
+sed 's/func_code/__code__/g' examples/usb_device_cdc_com_port/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/usb_device_cdc_com_port/SConscript
+sed 's/func_code/__code__/g' examples/usb_device_f0_custom_hid/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/usb_device_f0_custom_hid/SConscript
+sed 's/func_code/__code__/g' examples/usb_device_hid_custom_adc/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/usb_device_hid_custom_adc/SConscript
+sed 's/func_code/__code__/g' examples/usb_device_hid_keyboard/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/usb_device_hid_keyboard/SConscript
+sed 's/func_code/__code__/g' examples/usb_device_hid_mouse/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/usb_device_hid_mouse/SConscript
+sed 's/func_code/__code__/g' examples/usb_device_msc_internal/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/usb_device_msc_internal/SConscript
+sed 's/func_code/__code__/g' examples/usb_device_msc_sdcard/SConscript > /tmp/SConscript
+mv /tmp/SConscript examples/usb_device_msc_sdcard/SConscript
