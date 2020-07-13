@@ -150,8 +150,8 @@ float = None
 # use GCCPATH
 
 gccpath = ARGUMENTS.get('gcc')
-if !gccpath:
-  gccpath = "/opt/uzi/bin/gcc-arm-none-eabi-6_2-2016q4/bin/";
+if not gccpath:
+	gccpath = "/opt/uzi/bin/gcc-arm-none-eabi-6_2-2016q4/bin/";
 
 # set up build environment and pull in OS environment variables
 
